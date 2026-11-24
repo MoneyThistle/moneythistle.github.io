@@ -18,7 +18,7 @@
   <a class="btn secondary" href="https://github.com/MoneyThistle/MoneyThistle#install">Install instructions</a>
 </header>
 
-<img class="hero" src="assets/home.png" alt="MoneyThistle home screen with made-up sample data">
+<img class="hero zoomable" src="assets/home.png" alt="MoneyThistle home screen with made-up sample data" title="Click to see it larger">
 
 <section>
 <h2>What it is</h2>
@@ -45,11 +45,12 @@
 
 <section>
 <h2>Screenshots</h2>
+<p style="color:var(--muted)">Click any screenshot to see it larger.</p>
 <div class="shots">
-  <figure><img src="assets/register.png" alt="An account register in MoneyThistle"><figcaption>An account's register</figcaption></figure>
-  <figure><img src="assets/bills.png" alt="Bills and Deposits in MoneyThistle"><figcaption>Bills &amp; Deposits</figcaption></figure>
-  <figure><img src="assets/budget.png" alt="The budget in MoneyThistle"><figcaption>The budget</figcaption></figure>
-  <figure><img src="assets/home-dark.png" alt="MoneyThistle home screen in the dark look"><figcaption>Home, in the dark look</figcaption></figure>
+  <figure><img class="zoomable" src="assets/register.png" alt="An account register in MoneyThistle" title="Click to see it larger"><figcaption>An account's register</figcaption></figure>
+  <figure><img class="zoomable" src="assets/bills.png" alt="Bills and Deposits in MoneyThistle" title="Click to see it larger"><figcaption>Bills &amp; Deposits</figcaption></figure>
+  <figure><img class="zoomable" src="assets/budget.png" alt="The budget in MoneyThistle" title="Click to see it larger"><figcaption>The budget</figcaption></figure>
+  <figure><img class="zoomable" src="assets/home-dark.png" alt="MoneyThistle home screen in the dark look" title="Click to see it larger"><figcaption>Home, in the dark look</figcaption></figure>
 </div>
 <p style="color:var(--muted)">Made-up sample data in every screenshot. A new install offers "Try it with sample data", and "Start fresh" clears it when you are ready.</p>
 </section>
@@ -79,5 +80,26 @@
   <p>MoneyThistle: A Slightly Better Money App. Free and open source under AGPL-3.0.</p>
 </footer>
 </div>
+<div class="lightbox" id="lightbox" hidden>
+  <figure>
+    <img id="lightbox-img" src="" alt="">
+    <figcaption id="lightbox-cap"></figcaption>
+  </figure>
+  <p class="lightbox-hint">Click anywhere or press Esc to close</p>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox'),
+      img=document.getElementById('lightbox-img'),
+      cap=document.getElementById('lightbox-cap');
+  function open(src,alt){img.src=src;img.alt=alt;cap.textContent=alt;box.hidden=false;document.body.style.overflow='hidden';}
+  function close(){box.hidden=true;img.src='';document.body.style.overflow='';}
+  document.querySelectorAll('img.zoomable').forEach(function(el){
+    el.addEventListener('click',function(){open(el.src,el.alt);});
+  });
+  box.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!box.hidden)close();});
+})();
+</script>
 </body>
 </html>
