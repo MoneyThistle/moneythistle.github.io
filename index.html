@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MoneyThistle: A Slightly Better Money App</title>
+<meta name="description" content="MoneyThistle is a free, open source personal money manager that runs in your browser, on your own computer or server. Accounts, bills, budgets, forecasts and backups to Nextcloud. No bank connection.">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <img class="logo" src="assets/logo.png" alt="MoneyThistle logo">
+  <div><img class="wordmark" src="assets/wordmark.png" alt="MoneyThistle"></div>
+  <p class="tagline">A Slightly Better Money App</p>
+  <a class="btn" href="https://github.com/MoneyThistle/MoneyThistle">Get it on GitHub</a>
+  <a class="btn secondary" href="https://github.com/MoneyThistle/MoneyThistle#install">Install instructions</a>
+</header>
+
+<img class="hero" src="assets/home.png" alt="MoneyThistle home screen with made-up sample data">
+
+<section>
+<h2>What it is</h2>
+<p>A simple personal money manager that opens in your web browser. It runs as a program on Windows, as a container on Docker or Unraid, and on macOS or Linux with Python. Accounts and registers, Bills &amp; Deposits, paychecks and paystubs, budgets, reports and a year-end tax report, receipts, and automatic backups to a folder and to Nextcloud (or any WebDAV server).</p>
+<p>No bank connection. You type transactions in, or import the files your bank lets you download. In English, French, Spanish and Portuguese.</p>
+<p>It is built for household money, shared between the people in a home, and at most a very simple sole proprietorship kept in its own environment. It is not business bookkeeping: no invoices, receivables or payables, sales tax, payroll or double-entry books.</p>
+</section>
+
+<section>
+<h2>The feature it was built for</h2>
+<p>Most money programs forecast a variable bill at a fixed amount you guess, or at whatever it happened to be last month. MoneyThistle can base a scheduled transaction on its own history: the expected amount is the average of up to the last N recorded amounts, 12 by default. That averaged amount is what the forecast uses, day by day, so the picture of your future balance reflects what a bill actually tends to cost.</p>
+<p>That combination came from Microsoft Money, which has been abandoned for years. It has not turned up in the other free and open source money programs we checked.</p>
+</section>
+
+<section>
+<h2>Run it the way that suits you</h2>
+<div class="grid">
+  <div class="card"><h3>On one computer</h3><p>Install it locally and open it only on that machine, at <code>localhost</code>. Nothing leaves the computer.</p></div>
+  <div class="card"><h3>On your home network</h3><p>Run it on one machine and reach it from others on your LAN, with each person signing in with their own name and password.</p></div>
+  <div class="card"><h3>On a server, over Tailscale</h3><p>Run it on a server that is on around the clock, on Unraid or Docker, and reach it from anywhere through a private VPN such as Tailscale.</p></div>
+</div>
+<div class="notice"><strong>Keep it off the public internet.</strong> Never expose MoneyThistle with port forwarding or a public reverse proxy. Use it on your home network or through a private VPN. It has sign-in, but it is not built or tested to withstand attacks from the internet.</div>
+</section>
+
+<section>
+<h2>Screenshots</h2>
+<div class="shots">
+  <figure><img src="assets/register.png" alt="An account register in MoneyThistle"><figcaption>An account's register</figcaption></figure>
+  <figure><img src="assets/bills.png" alt="Bills and Deposits in MoneyThistle"><figcaption>Bills &amp; Deposits</figcaption></figure>
+  <figure><img src="assets/budget.png" alt="The budget in MoneyThistle"><figcaption>The budget</figcaption></figure>
+  <figure><img src="assets/home-dark.png" alt="MoneyThistle home screen in the dark look"><figcaption>Home, in the dark look</figcaption></figure>
+</div>
+<p style="color:var(--muted)">Made-up sample data in every screenshot. A new install offers "Try it with sample data", and "Start fresh" clears it when you are ready.</p>
+</section>
+
+<section>
+<h2>Moving in from another program</h2>
+<p>MoneyThistle reads QIF exports from Microsoft Money, Quicken, Moneydance, KMyMoney, HomeBank, Money Manager Ex and Banktivity, and CSV exports from YNAB, GnuCash, Actual Budget, Mint and Firefly III, or any CSV with an Account column. You see a preview first, and choose for each account whether it becomes a new account, goes into an existing one, or is left out.</p>
+</section>
+
+<section>
+<h2>Backups</h2>
+<p>Automatic backups go to a local folder and, if you set it up, to Nextcloud or another WebDAV server. Backups hold everything, all environments and sign-ins, in one file, and any backup can be restored from the Backups page. That includes starting over on a new computer or server from a backup alone.</p>
+</section>
+
+<section>
+<h2>How it was made, honestly</h2>
+<p>MoneyThistle is "vibe coded". Nearly all of its code, screens, help and tests were written by an AI (Anthropic's Claude) from plain-language requests. Its human maintainer decided what it should do, used and tested every feature, and has not reviewed the code line by line. It has automated tests and everyday use behind it, but no professional code review or security audit. Keep backups, keep it off the public internet, and reviews and fixes are welcome.</p>
+</section>
+
+<section>
+<h2>Free and open source</h2>
+<p>MoneyThistle is free and open source under the GNU AGPL-3.0. Use it, change it and share it. If you offer a changed version to others, including as a hosted website, share your changes too. The MoneyThistle name, logo and wordmark identify this project, so a changed version you share should have its own name and look. Saying it is "based on MoneyThistle" is welcome.</p>
+</section>
+
+<footer>
+  <p><a href="https://github.com/MoneyThistle/MoneyThistle">MoneyThistle on GitHub</a> &middot; <a href="https://wp.thistle.casa">WPThistle</a></p>
+  <p>MoneyThistle: A Slightly Better Money App. Free and open source under AGPL-3.0.</p>
+</footer>
+</div>
+</body>
+</html>
