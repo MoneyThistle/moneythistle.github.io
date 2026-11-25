@@ -8,6 +8,7 @@ header .wordmark{margin-bottom:14px}
 .btn{display:inline-block;background:var(--accent);color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:600;margin:4px}
 .btn.secondary{background:transparent;color:var(--accent-dark);border:2px solid var(--accent)}
 @media (prefers-color-scheme:dark){.btn{color:#14200f}.btn.secondary{color:var(--accent-dark)}}
+.intro-video{width:100%;border:1px solid var(--line);border-radius:12px;margin:22px 0 0;background:#101410}
 .hero{width:100%;border:1px solid var(--line);border-radius:12px;margin:22px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:18px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
